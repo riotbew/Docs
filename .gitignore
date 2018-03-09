@@ -1,0 +1,5 @@
+/python/.idea
+/python/code/*.pyc
+/python/code/data/*.txt
+/python/code/kt/data
+/python/code/kt/config
