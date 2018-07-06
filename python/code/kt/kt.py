@@ -76,8 +76,9 @@ def update_all():
 
 	while True:
 		result = post(url_history,post_data+token+'&page='+str(x)).text
-		
 		result = json.loads(result)
+		print(result['info'])
+
 		count = math.ceil(result['data']['count']/30.0)
 		history_all = history_all + result['data']['list']
 		print str(int(math.floor((x/count)*100)))+'%'
@@ -112,7 +113,7 @@ def isLogin():
 
 def login():
 	global token
-	user_info = open('./user_info.json').read()
+	user_info = open('./config/user_info.json').read()
 	try:
 		user_info = json.loads(user_info)
 	except Exception as e:

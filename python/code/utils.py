@@ -70,7 +70,11 @@ def init():
 init()
 
 def main():
-	
+	a = 112
+	b = 112
+	c = a
+	print hex(c+b*16*16+a*16*16*16*16)
+
 	pass
 
 if __name__ == '__main__':

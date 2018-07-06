@@ -32,9 +32,11 @@ python使用lambda来创建匿名函数。
 
 # lambda 例子
 
-sum = lambda arg1, arg2: arg1+arg2;
+# sum = lambda arg1, arg2: arg1+arg2;
 
-print(sum(10,20))
+# print(sum(10,20))
+for position in xrange(0,96):
+	print position,position/4*5+position%4+1
 
 # 变量作用域
 

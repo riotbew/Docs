@@ -54,7 +54,6 @@ THS_URL = [
 #     else:
 #         return s + '%'
  
-
 # if __name__ == '__main__':
 	
 # 	x = randn(5000)
@@ -70,3 +69,21 @@ THS_URL = [
 # 	plt.gca().yaxis.set_major_formatter(formatter)
 	 
 # 	plt.show()
+import time
+import requests
+import json
+
+def main():
+	url = 'http://10.180.184.122/getapp/getIosAndroidJobStatus.php?product=fproject&repo=git&sys=android&rows=1000&'
+	now = str(time.time())
+	_ = '_='+now[:len(now)-3]+now[len(now)-2:]+'0'
+	url = url + _
+	response = requests.get(url)
+	res = response.json()
+	print json.dumps(res['android'])
+
+
+
+if __name__ == '__main__':
+	main()
+
